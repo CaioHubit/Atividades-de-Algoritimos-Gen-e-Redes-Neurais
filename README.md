@@ -1,5 +1,15 @@
-# Template para a disciplina de Redes Neurais e Algoritmos Genéticos
+<h1 align="center"> Algoritmo Genéticos e Redes Neurais </h1>
 
+<p align="center">
+<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+</p>
+
+Sobre
+=================
+
+
+
+# Conselhos Obrigatórios
 Use este template como base para organizar seus experimentos na disciplina de Redes Neurais e Algoritmos Genéticos. 
 
 Lembretes:
