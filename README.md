@@ -6,9 +6,28 @@
 
 Sobre
 =================
+## Colaboradores✨
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/CaioHubit"><img src="https://avatars.githubusercontent.com/u/110487580?v=4" width="100px;" alt=""/><br /><sub><b>Caio Eduardo</b></sub></a><br />Programmer</td>
+  </tr>
+</table>
 
-
-
+## Mentores✨
+<!-- ALL-MENTORES-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/drcassar"><img src="https://avatars.githubusercontent.com/u/9871905?v=4" width="100px;" alt=""/><br /><sub><b>Daniel R. Cassar</b></sub></a><br />Professor</td>
+    
 # Conselhos Obrigatórios
 Use este template como base para organizar seus experimentos na disciplina de Redes Neurais e Algoritmos Genéticos. 
 
