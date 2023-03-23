@@ -27,6 +27,8 @@ Sobre
 <table>
   <tr>
     <td align="center"><a href="https://github.com/drcassar"><img src="https://avatars.githubusercontent.com/u/9871905?v=4" width="100px;" alt=""/><br /><sub><b>Daniel R. Cassar</b></sub></a><br />Professor</td>
+      </tr>
+</table>
     
 # Conselhos Obrigatórios
 Use este template como base para organizar seus experimentos na disciplina de Redes Neurais e Algoritmos Genéticos. 
