@@ -40,7 +40,7 @@ README's mais específicos sobre como funcionam cada seção de atividade podem 
       </tr>
 </table>
     
-# Conselhos Obrigatórios
+# Conselhos Obrigatórios Para a Execução
 Use este template como base para organizar seus experimentos na disciplina de Redes Neurais e Algoritmos Genéticos. 
 
 Lembretes:
