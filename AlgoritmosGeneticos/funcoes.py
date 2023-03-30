@@ -247,7 +247,6 @@ def mutacao_cb(individuo):
     return individuo
 
 
-# NOVIDADE
 def mutacao_cnb(individuo, valor_max_caixa):
     """Realiza a mutação de um gene no problema das caixas não-binárias
     Args:
@@ -262,8 +261,6 @@ def mutacao_cnb(individuo, valor_max_caixa):
     individuo[gene_a_ser_mutado] = gene_cnb(valor_max_caixa)
     return individuo
 
-
-# NOVIDADE
 def mutacao_senha(individuo, letras):
     """Realiza a mutação de um gene no problema da senha.
     Args:
@@ -291,8 +288,6 @@ def funcao_objetivo_cb(individuo):
     """
     return sum(individuo)
 
-
-# NOVIDADE
 def funcao_objetivo_cnb(individuo):
     """Computa a função objetivo no problema das caixas não-binárias.
     Args:
@@ -302,8 +297,6 @@ def funcao_objetivo_cnb(individuo):
     """
     return sum(individuo)
 
-
-# NOVIDADE
 def funcao_objetivo_senha(individuo, senha_verdadeira):
     """Computa a funcao objetivo de um individuo no problema da senha
     Args:
@@ -340,3 +333,17 @@ def funcao_objetivo_pop_cb(populacao):
         fitness.append(fobj)
     return fitness
 
+def funcao_objetivo_pop_senha(populacao, senha_verdadeira):
+    """Computa a funcao objetivo de uma populaçao no problema da senha.
+    Args:
+      populacao: lista com todos os individuos da população
+      senha_verdadeira: a senha que você está tentando descobrir
+    Returns:
+      Lista contendo os valores da métrica de distância entre senhas.
+    """
+    resultado = []
+
+    for individuo in populacao:
+        resultado.append(funcao_objetivo_senha(individuo, senha_verdadeira))
+
+    return resultado
