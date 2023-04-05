@@ -36,11 +36,11 @@
   
 <p>📝O algoritmo de busca aleatória pode ser útil em alguns problemas de otimização, mas não é uma solução ideal para todos os problemas. Em contrapartida, os algoritmos genéticos são uma técnica mais poderosa e versátil que podem lidar com problemas de otimização complexos e grandes espaços de busca. Eles utilizam uma abordagem evolutiva para encontrar soluções aproximadas para problemas que não podem ser resolvidos facilmente por métodos tradicionais. Portanto, algoritmos genéticos são uma alternativa valiosa para solucionar problemas de otimização que exigem uma abordagem mais sofisticada.
 
-<h3> 1)💡Busca em Grade💡</h3>
+<h3> 2)💡Busca em Grade💡</h3>
   
 <p>📝A busca em grade é um algoritmo simples e determinístico que pode ser útil em problemas de otimização com espaços de busca menores e menos complexos. Embora possa ser capaz de encontrar a solução ótima, a busca em grade pode ser ineficiente em espaços de busca grandes ou complexos. Para resolver problemas de otimização complexos, outras técnicas, como algoritmos genéticos ou busca em vizinhança, podem ser mais eficazes.  
 
-<h3> 1)💡Algoritmo Genético 💡</h3>  
+<h3> 3)💡Algoritmo Genético 💡</h3>  
   
 <p>📝O algoritmo genético é uma técnica poderosa para resolver problemas de otimização, com capacidade de encontrar mínimos ou máximos da função objetivo em espaços de busca complexos. A etapa de mutação é importante para manter a diversidade genética na população, evitar a convergência prematura para um mínimo local e explorar outras regiões do espaço de busca. No entanto, é necessário encontrar um equilíbrio adequado entre a chance de mutação e outras etapas do algoritmo para obter os melhores resultados de otimização.
 
