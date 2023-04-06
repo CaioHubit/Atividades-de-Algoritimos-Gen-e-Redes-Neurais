@@ -10,7 +10,7 @@ Este repositório contém experimentos e resoluções de diversos Algoritmos Gen
 
 A linguagem de programação utilizada para o desenvolvimento dos experimentos é Python, os quais foram programados através do Jupyter Notebook (Jupyter Lab);
 
-As 2 seções de atividades estão separadas nas pastas Algoritmos Genéticos e pasta Redes Neurais , contendo os arquivos de experimentos separadamente e em ordem, que serão adicionados ao longo do curso conforme forem realizados. Também dentro destas, encontram-se arquivos .py que contém funções e afins, necessários para a construção dos algoritmos;
+As 2 seções de atividades estão separadas nas pastas Algoritmos Genéticos e pasta Redes Neurais, contendo os arquivos de experimentos separadamente e em ordem, que serão adicionados ao longo do curso conforme forem realizados. Também dentro destas, encontram-se arquivos .py que contém funções e afins, necessários para a construção dos algoritmos;
 
 Um template de notebook no qual construímos o experimento também está disponível neste repositório;
 
