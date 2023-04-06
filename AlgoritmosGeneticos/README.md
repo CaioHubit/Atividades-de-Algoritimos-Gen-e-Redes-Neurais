@@ -34,7 +34,7 @@
   
   <h3> 1)💡Busca Aleatória💡</h3>
   
-<p>📝O algoritmo de busca aleatória pode ser útil em alguns problemas de otimização, mas não é uma solução ideal para todos os problemas. Em contrapartida, os algoritmos genéticos são uma técnica mais poderosa e versátil que podem lidar com problemas de otimização complexos e grandes espaços de busca. Eles utilizam uma abordagem evolutiva para encontrar soluções aproximadas para problemas que não podem ser resolvidos facilmente por métodos tradicionais. Portanto, algoritmos genéticos são uma alternativa valiosa para solucionar problemas de otimização que exigem uma abordagem mais sofisticada.
+<p>📝O algoritmo de busca aleatória pode ser útil em alguns problemas de otimização, mas não é uma solução ideal para todos os problemas. A busca aleatória não tem um mecanismo para garantir que a busca esteja progredindo em direção a uma solução ótima. Pode levar muito tempo para a busca encontrar uma solução aceitável e pode não ser capaz de encontrar uma solução ótima em tempo hábil.
 
 <h3> 2)💡Busca em Grade💡</h3>
   
