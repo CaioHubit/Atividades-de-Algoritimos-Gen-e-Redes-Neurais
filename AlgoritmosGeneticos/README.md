@@ -34,7 +34,7 @@
   
   <h3> 1)💡Busca Aleatória💡</h3>
   
-<p>📝O algoritmo de busca aleatória pode ser útil em alguns problemas de otimização, mas não é uma solução ideal para todos os problemas. A busca aleatória não tem um mecanismo para garantir que a busca esteja progredindo em direção a uma solução ótima. Pode levar muito tempo para a busca encontrar uma solução aceitável e pode não ser capaz de encontrar uma solução ótima em tempo hábil.
+<p>📝O algoritmo de busca aleatória pode ser útil em alguns problemas de otimização, mas não é uma solução ideal para todos os problemas. A busca aleatória não tem um mecanismo para garantir que a busca esteja progredindo em direção a uma solução ótima. Pode levar muito tempo para a busca encontrar uma solução aceitável e pode não ser capaz de encontrar uma solução ótima em tempo hábil. A eficácia da busca aleatória depende muito do espaço de solução e da distribuição das soluções. Se o espaço de solução for muito grande ou se as soluções não estiverem uniformemente distribuídas, a busca aleatória pode ser ineficaz.
 
 <h3> 2)💡Busca em Grade💡</h3>
   
