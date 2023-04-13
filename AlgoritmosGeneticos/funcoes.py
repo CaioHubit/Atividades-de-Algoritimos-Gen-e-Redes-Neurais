@@ -5,7 +5,6 @@ import random
 ##############################################################################+
 
 
-# NOVIDADE
 def distancia_entre_dois_pontos(a, b):
     """Computa a distância Euclidiana entre dois pontos em R^2
 
@@ -27,7 +26,6 @@ def distancia_entre_dois_pontos(a, b):
     return dist
 
 
-# NOVIDADE
 def cria_cidades(n):
     """Cria um dicionário aleatório de cidades com suas posições (x,y).
 
@@ -46,6 +44,40 @@ def cria_cidades(n):
         cidades[f"Cidade {i}"] = (random.random(), random.random())
 
     return cidades
+
+
+# NOVIDADE
+def computa_mochila(individuo, objetos, ordem_dos_nomes):
+    """Computa o valor total e peso total de uma mochila
+
+    Args:
+      individiuo:
+        Lista binária contendo a informação de quais objetos serão selecionados.
+      objetos:
+        Dicionário onde as chaves são os nomes dos objetos e os valores são
+        dicionários com a informação do peso e valor.
+      ordem_dos_nomes:
+        Lista contendo a ordem dos nomes dos objetos.
+
+    Returns:
+      valor_total: valor total dos itens da mochila em unidades de dinheiros.
+      peso_total: peso total dos itens da mochila em unidades de massa.
+    """
+
+    "vamos preencher aqui"
+
+    valor_total = 0
+    peso_total = 0
+    
+    for pegou_o_item_ou_nao, nome_do_item in zip (individuo, ordem_dos_nomes):
+        if pegou_o_item_ou_nao == 1:
+            valor_do_item = objetos[nome_do_item]["valor"]
+            peso_do_item = objetos[nome_do_item]["peso"]
+            
+            valor_total = valor_total + valor_do_item
+            peso_total = peso_total + peso_do_item
+        pass
+    return valor_total, peso_total
 
 
 ###############################################################################
@@ -149,7 +181,6 @@ def individuo_senha(tamanho_senha, letras):
     return candidato
 
 
-# NOVIDADE
 def individuo_cv(cidades):
     """Sorteia um caminho possível no problema do caixeiro viajante
 
@@ -224,7 +255,6 @@ def populacao_inicial_senha(tamanho, tamanho_senha, letras):
     return populacao
 
 
-# NOVIDADE
 def populacao_inicial_cv(tamanho, cidades):
     """Cria população inicial no problema do caixeiro viajante.
 
@@ -333,7 +363,6 @@ def cruzamento_ponto_simples(pai, mae):
     return filho1, filho2
 
 
-# NOVIDADE
 def cruzamento_ordenado(pai, mae):
     """Operador de cruzamento ordenado.
 
@@ -421,7 +450,6 @@ def mutacao_senha(individuo, letras):
     return individuo
 
 
-# NOVIDADE
 def mutacao_de_troca(individuo):
     """Troca o valor de dois genes.
 
@@ -494,7 +522,6 @@ def funcao_objetivo_senha(individuo, senha_verdadeira):
     return diferenca
 
 
-# NOVIDADE
 def funcao_objetivo_cv(individuo, cidades):
     """Computa a funcao objetivo de um individuo no problema do caixeiro viajante.
 
@@ -529,6 +556,36 @@ def funcao_objetivo_cv(individuo, cidades):
     distancia = distancia + percurso
     
     return distancia
+
+
+# NOVIDADE
+def funcao_objetivo_mochila(individuo, objetos, limite, ordem_dos_nomes):
+    """Computa a funcao objetivo de um candidato no problema da mochila.
+
+    Args:
+      individiuo:
+        Lista binária contendo a informação de quais objetos serão selecionados.
+      objetos:
+        Dicionário onde as chaves são os nomes dos objetos e os valores são
+        dicionários com a informação do peso e valor.
+      limite:
+        Número indicando o limite de peso que a mochila aguenta.
+      ordem_dos_nomes:
+        Lista contendo a ordem dos nomes dos objetos.
+
+    Returns:
+      Valor total dos itens inseridos na mochila considerando a penalidade para
+      quando o peso excede o limite.
+    """
+
+    "vamos preencher aqui"
+    valor_mochila, peso_mochila = computa_mochila(individuo, objetos, ordem_dos_nomes)
+    if peso_mochila > limite:
+            return 0.01
+    else:
+        return valor_mochila
+    pass
+
 
 
 ###############################################################################
@@ -586,13 +643,12 @@ def funcao_objetivo_pop_senha(populacao, senha_verdadeira):
     return resultado
 
 
-# NOVIDADE
 def funcao_objetivo_pop_cv(populacao, cidades):
     """Computa a funcao objetivo de uma população no problema do caixeiro viajante.
 
     Args:
       populacao:
-        Lista com todos os inviduos da população
+        Lista com todos os individuos da população
       cidades:
         Dicionário onde as chaves são os nomes das cidades e os valores são as
         coordenadas das cidades.
@@ -606,3 +662,149 @@ def funcao_objetivo_pop_cv(populacao, cidades):
     for individuo in populacao:
         resultado.append(funcao_objetivo_cv(individuo, cidades))
     return resultado
+
+
+# NOVIDADE
+def funcao_objetivo_pop_mochila(populacao, objetos, limite, ordem_dos_nomes):
+    """Computa a fun. objetivo de uma populacao no problema da mochila
+
+    Args:
+      populacao:
+        Lista com todos os individuos da população
+      objetos:
+        Dicionário onde as chaves são os nomes dos objetos e os valores são
+        dicionários com a informação do peso e valor.
+      limite:
+        Número indicando o limite de peso que a mochila aguenta.
+      ordem_dos_nomes:
+        Lista contendo a ordem dos nomes dos objetos.
+
+    Returns:
+      Lista contendo o valor dos itens da mochila de cada indivíduo.
+    """
+
+    resultado = []
+    for individuo in populacao:
+        resultado.append(
+            funcao_objetivo_mochila(
+                individuo, objetos, limite, ordem_dos_nomes
+            )
+        )
+
+    return resultado
+
+###############################################################################
+#                         Exercício GA.09 - Liga Ternária mais Cara           #
+###############################################################################
+
+def gene_LMC(valor_max):
+    """Definição da massa para um componente na liga.
+    
+    Args:
+        valor_max: o preço máximo da liga
+    Return:
+        Retornar o minimo em gramas de cada liga
+        
+    """
+    gene = random.uniform(5,valor_max)    
+    return gene
+
+def individuo_LMC(numero_genes, preco):
+    """ Define um indivíduo com as massas de cada um dos elementos
+    
+    Args:
+        Preco: Lista com todos os elementos
+        numero_genes: Temos três, então a liga deve ter o valor de 3
+        
+    Return:
+        Retorna o indivíduo, a lista de 92 posições que representa a massa de cada
+    """
+    individuo = [0 for _ in range(len(list(preco.values())))]
+    valor_maximo_massa = 100
+
+    for n in range(numero_genes-1):
+        cond = True
+        while cond:
+            index = random.randint(0,len(individuo)-1)
+            
+            if individuo[index] == 0:
+                gene = gene_LMC(valor_maximo_massa-((numero_genes-n-1)*5))
+                individuo[index] = gene
+                valor_maximo_massa -= gene
+                cond = False
+   
+    index = random.randint(0,len(individuo)-1)    
+    individuo[index] = valor_maximo_massa
+    
+    return individuo
+
+def populacao_inicial_LMC(numero_genes, tamanho_populacao, preco):
+    """Cria população inicial em que cada indivíduo é uma liga ternária.
+    
+    Args:
+        numero_genes:  quantidade de genes do indivíduo, como é a liga ternária, a constante passada deve ser 3;
+        tamanho_populacao: quantidade de indivíduos dentro da população;
+        preco: lista que contenha todos os elementos disponíveis.
+    
+    Return:
+        Retorna a população de indivíduos.
+    """
+    populacao = []
+    for _ in range(tamanho_populacao):
+        populacao.append(individuo_LMC(numero_genes,preco))
+    return populacao
+
+def funcao_objetivo_LMC(individuo, preco):
+    """Calcula o fitness da liga ternária.
+    
+    Args:
+        individuo: lista que contém os genes das ligas ternárias.
+        preco: dicionário que contém a relação de cada elemento com seu respectivo valor (dólar por kg).
+    
+    Return:
+        Retorna um valor que representa o fitness da liga.
+    """
+    valor_final = 0
+    for massa, valor in zip(individuo, preco.values()):
+        valor_final += massa*valor/1e3
+    return valor_final
+
+
+def funcao_objetivo_pop_LMC(populacao, preco):
+    """Calcula a função objetivo para todos os membros da população.
+    
+    Args:
+        populacao: lista com todos os indivíduos da população;
+        preco: dicionário que contém a relação de cada elemento com seu respectivo valor (dólar por kg).
+    
+    Return:
+        Retorna a lista de valores que representa o fitness de cada elemento da população.
+    """
+    fitness = []
+    for individuo in populacao:
+        fobj = funcao_objetivo_LMC(individuo, preco)
+        fitness.append(fobj)
+    return fitness
+
+def cruzamento_ponto_simples_LMC(pai, mae, n_genes):
+    """Operador de cruzamento de ponto simples para o problema das ligas ternárias.
+    
+    Args:
+        pai: uma lista representando um indivíduo;
+        mae: uma lista representando um indivíduo.
+    
+    Return:
+        Duas listas, sendo que cada uma representa um filho dos pais que foram os argumentos.
+    """
+    
+    # Se começasse no zero, ou seja, no primeiro índice da lista, não existira mistura
+    # assim como se fosse possível pegar o último item da lista
+        
+    while True:
+        ponto_de_corte = random.randint(1,len(pai)-1)
+        
+        filho1 = pai[:ponto_de_corte] + mae[ponto_de_corte:]
+        filho2 = mae[:ponto_de_corte] + pai[ponto_de_corte:]
+                
+        if np.count_nonzero(filho1) == n_genes and np.count_nonzero(filho2) == n_genes:
+            return filho1, filho2
