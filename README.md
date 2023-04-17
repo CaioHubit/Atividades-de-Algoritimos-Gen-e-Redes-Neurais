@@ -26,10 +26,7 @@
 	</ul>
 	<h2>Referências</h2>
 	<ul>
-		<li>Livro: "</li>
-		<li>Livro: "</li>
-		<li>
-		<li>
+		<li>Livro: Wirsansky - 2020 - Hands-On Genetic Algorithms
 	</ul>
 </body>
 </html>
