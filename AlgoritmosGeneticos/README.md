@@ -52,5 +52,10 @@
   
 <p>📝As vantagens desse método incluem a capacidade de lidar com um grande espaço de soluções possíveis e a capacidade de encontrar soluções ótimas ou subótimas em um tempo razoável. Além disso, o algoritmo genético pode ser facilmente adaptado para lidar com diferentes tipos de senhas e critérios de avaliação. O método pode ser particularmente eficaz quando lidamos com senhas complexas e difíceis de serem adivinhadas por métodos tradicionais. Além disso, o algoritmo genético pode ser usado em conjunto com outras técnicas de otimização, como buscas locais, para aumentar ainda mais a eficácia do método. No entanto, é importante notar que o sucesso do método depende muito da escolha dos parâmetros do algoritmo genético, como tamanho da população, taxa de cruzamento e taxa de mutação. Além disso, o método pode levar a soluções subótimas se a função de avaliação não for bem definida ou se a população inicial de soluções aleatórias não for suficientemente diversa.
 
+<h3> 6)💡Caixeiro Viajante💡</h3>  
+  
+<p>📝  O método do caixeiro viajante é um problema NP-difícil, o que significa que é impossível encontrar a solução ótima em um tempo razoável para conjuntos de dados maiores. Nesses casos, algoritmos aproximados como o algoritmo genético são uma alternativa útil para encontrar soluções boas o suficiente em um tempo razoável. Caixeiro Viajante é uma abordagem mais complexa e exige uma solução que inclui uma otimização combinatorial, que pode ser computacionalmente difícil em problemas com um grande número de itens. Por outro lado, o método do Caixeiro Viajante tem a vantagem de garantir a solução ótima para o problema, desde que seja possível encontrar uma solução para o subproblema do caixeiro viajante.
+
+
 </body>
 </html>
