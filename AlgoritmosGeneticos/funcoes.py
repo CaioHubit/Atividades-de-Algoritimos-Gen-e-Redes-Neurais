@@ -1,14 +1,11 @@
 import random
-
+import numpy as np
 ###############################################################################
 #                                   Suporte                                   #
 ##############################################################################+
 
-
-<<<<<<< HEAD
-=======
 # NOVIDADE
->>>>>>> 6125f80644199823ca1fe3fc03e36681d0183baf
+
 def distancia_entre_dois_pontos(a, b):
     """Computa a distância Euclidiana entre dois pontos em R^2
 
@@ -30,10 +27,9 @@ def distancia_entre_dois_pontos(a, b):
     return dist
 
 
-<<<<<<< HEAD
-=======
+
 # NOVIDADE
->>>>>>> 6125f80644199823ca1fe3fc03e36681d0183baf
+
 def cria_cidades(n):
     """Cria um dicionário aleatório de cidades com suas posições (x,y).
 
@@ -53,7 +49,6 @@ def cria_cidades(n):
 
     return cidades
 
-<<<<<<< HEAD
 
 # NOVIDADE
 def computa_mochila(individuo, objetos, ordem_dos_nomes):
@@ -88,8 +83,6 @@ def computa_mochila(individuo, objetos, ordem_dos_nomes):
         pass
     return valor_total, peso_total
 
-=======
->>>>>>> 6125f80644199823ca1fe3fc03e36681d0183baf
 
 ###############################################################################
 #                                    Genes                                    #
@@ -191,11 +184,8 @@ def individuo_senha(tamanho_senha, letras):
 
     return candidato
 
-
-<<<<<<< HEAD
-=======
 # NOVIDADE
->>>>>>> 6125f80644199823ca1fe3fc03e36681d0183baf
+
 def individuo_cv(cidades):
     """Sorteia um caminho possível no problema do caixeiro viajante
 
@@ -269,11 +259,8 @@ def populacao_inicial_senha(tamanho, tamanho_senha, letras):
         populacao.append(individuo_senha(tamanho_senha, letras))
     return populacao
 
-
-<<<<<<< HEAD
-=======
 # NOVIDADE
->>>>>>> 6125f80644199823ca1fe3fc03e36681d0183baf
+
 def populacao_inicial_cv(tamanho, cidades):
     """Cria população inicial no problema do caixeiro viajante.
 
@@ -381,11 +368,8 @@ def cruzamento_ponto_simples(pai, mae):
 
     return filho1, filho2
 
-
-<<<<<<< HEAD
-=======
 # NOVIDADE
->>>>>>> 6125f80644199823ca1fe3fc03e36681d0183baf
+
 def cruzamento_ordenado(pai, mae):
     """Operador de cruzamento ordenado.
 
@@ -472,11 +456,7 @@ def mutacao_senha(individuo, letras):
     individuo[gene] = gene_letra(letras)
     return individuo
 
-
-<<<<<<< HEAD
-=======
 # NOVIDADE
->>>>>>> 6125f80644199823ca1fe3fc03e36681d0183baf
 def mutacao_de_troca(individuo):
     """Troca o valor de dois genes.
 
@@ -548,11 +528,7 @@ def funcao_objetivo_senha(individuo, senha_verdadeira):
 
     return diferenca
 
-
-<<<<<<< HEAD
-=======
 # NOVIDADE
->>>>>>> 6125f80644199823ca1fe3fc03e36681d0183baf
 def funcao_objetivo_cv(individuo, cidades):
     """Computa a funcao objetivo de um individuo no problema do caixeiro viajante.
 
@@ -588,8 +564,6 @@ def funcao_objetivo_cv(individuo, cidades):
     
     return distancia
 
-
-<<<<<<< HEAD
 # NOVIDADE
 def funcao_objetivo_mochila(individuo, objetos, limite, ordem_dos_nomes):
     """Computa a funcao objetivo de um candidato no problema da mochila.
@@ -618,10 +592,6 @@ def funcao_objetivo_mochila(individuo, objetos, limite, ordem_dos_nomes):
         return valor_mochila
     pass
 
-
-
-=======
->>>>>>> 6125f80644199823ca1fe3fc03e36681d0183baf
 ###############################################################################
 #                         Função objetivo - população                         #
 ###############################################################################
@@ -676,11 +646,8 @@ def funcao_objetivo_pop_senha(populacao, senha_verdadeira):
 
     return resultado
 
-
-<<<<<<< HEAD
-=======
 # NOVIDADE
->>>>>>> 6125f80644199823ca1fe3fc03e36681d0183baf
+
 def funcao_objetivo_pop_cv(populacao, cidades):
     """Computa a funcao objetivo de uma população no problema do caixeiro viajante.
 
@@ -704,7 +671,7 @@ def funcao_objetivo_pop_cv(populacao, cidades):
     for individuo in populacao:
         resultado.append(funcao_objetivo_cv(individuo, cidades))
     return resultado
-<<<<<<< HEAD
+
 
 
 # NOVIDADE
@@ -851,5 +818,4 @@ def cruzamento_ponto_simples_LMC(pai, mae, n_genes):
                 
         if np.count_nonzero(filho1) == n_genes and np.count_nonzero(filho2) == n_genes:
             return filho1, filho2
-=======
->>>>>>> 6125f80644199823ca1fe3fc03e36681d0183baf
+
