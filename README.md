@@ -8,7 +8,7 @@
 =================
 <body>
 	<p>Este repositório foi criado para armazenar o estudo e o desenvolvimento de projetos relacionados a Algoritmos Genéticos e Redes Neurais, feito por um estudante de graduação em CIencia, Tecnologia e Inovação.</p>
-	<p>O objetivo desse estudo é entender o funcionamento e aplicação dessas duas técnicas na solução de problemas de otimização e aprendizado de máquina. Além disso, espera-se adquirir habilidades em programação em Python e em bibliotecas relacionadas a essas técnicas, como o TensorFlow e o Keras.</p>
+	<p>O objetivo desse estudo é entender o funcionamento e aplicação dessas duas técnicas na solução de problemas de otimização e aprendizado de máquina. Além disso, espera-se adquirir habilidades em programação em Python e em bibliotecas relacionadas a essas técnicas.</p>
 	<h2>Conteúdo</h2>
 	<p>O repositório contém os seguintes itens:</p>
 	<ul>
