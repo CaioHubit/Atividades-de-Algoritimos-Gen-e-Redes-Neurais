@@ -39,10 +39,7 @@
   <p>Aqui estão algumas referências úteis para aprender mais sobre redes neurais em Python:</p>
 
   <ul>
-    <li>PyTorch Documentation: <a href="https://pytorch.org/docs/">https://pytorch.org/docs/</a></li>
-    <li>Deep Learning with Python, François Chollet</li>
-    <li>Neural Networks and Deep Learning, Michael Nielsen</li>
-    <li>Python Machine Learning, Sebastian Raschka and Vahid Mirjalili</li>
+    <li> </li>
   </ul>
 
   <p>Este README é parte de um projeto acadêmico e está em constante desenvolvimento. Fique à vontade para entrar em contato comigo para mais informações ou discussões sobre redes neurais em Python.</p>
