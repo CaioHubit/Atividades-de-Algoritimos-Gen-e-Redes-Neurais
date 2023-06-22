@@ -85,7 +85,7 @@ A regra da cadeia é uma ferramenta poderosa para calcular derivadas de funçõe
 
 Aqui está um exemplo passo a passo de como usar uma rede neural para realizar essa tarefa:
 
-1. Preparação dos dados:
+<b>1. Preparação dos dados:</b>
 
 Temos um conjunto de dados rotulados com pontos (x1, x2) e suas respectivas classes, A ou B.
 Dividimos os dados em um conjunto de treinamento e um conjunto de teste.
@@ -93,35 +93,46 @@ Definição da arquitetura da rede neural:
 
 Escolhemos uma arquitetura adequada para o problema. Por exemplo, uma rede neural com uma camada oculta contendo 5 neurônios pode ser suficiente para esse caso.
 
-2. Inicialização dos pesos:
+<b>2. Inicialização dos pesos:</b>
 
 Inicializamos os pesos da rede neural com valores aleatórios pequenos.
 
-3. Propagação direta (forward pass):
+<b>3. Propagação direta (forward pass):</b>
 
 Alimentamos um ponto de dados de treinamento (x1, x2) na rede neural.
 Cada neurônio da camada oculta calcula sua saída multiplicando os valores de entrada pelos pesos correspondentes, passando-os por uma função de ativação, como a função sigmoidal.
 As saídas da camada oculta são passadas para a camada de saída, onde a classificação é realizada usando outra função de ativação adequada, como a função sigmoidal para uma classificação binária.
 Obtemos a previsão da rede neural para o ponto de dados fornecido.
 
-4. Cálculo do erro:
+<b>4. Cálculo do erro:</b>
 
 Comparamos a previsão da rede neural com a classe verdadeira do ponto de dados e calculamos o erro usando uma função de perda, como o erro quadrático médio ou a entropia cruzada.
+Para medir a diferença entre as previsões da rede neural e as classes verdadeiras, utilizamos uma função de perda (loss function).
 
-5. Retropropagação (backpropagation):
+<em><b>Existem diferentes funções de perda disponíveis, sendo duas das mais comuns o erro quadrático médio (mean squared error - MSE) e a entropia cruzada (cross-entropy). Vou explicar brevemente cada uma delas:</b></em>
+
+<li><em><b>Erro quadrático médio (MSE):</b></em></li>
+
+O MSE é uma função de perda usada em problemas de regressão, onde as classes são valores contínuos. Ele calcula a média dos quadrados das diferenças entre as previsões da rede neural e as classes verdadeiras. Quanto menor o valor do MSE, melhor a qualidade da previsão.
+
+<li><em><b>Entropia cruzada:</em></b></li>
+
+A entropia cruzada é uma função de perda comumente usada em problemas de classificação, onde as classes são discretas. Ela mede a dissimilaridade entre as distribuições de probabilidade das previsões da rede neural e as classes verdadeiras. A entropia cruzada é particularmente útil quando se utiliza a função de ativação softmax na camada de saída da rede neural. Ela penaliza mais fortemente as previsões errôneas e incentiva a rede a aprender a distribuição de probabilidade correta das classes.
+
+<b>5. Retropropagação (backpropagation):</b>
 
 Calculamos o gradiente do erro em relação aos pesos da rede neural usando o algoritmo de retropropagação. Esse cálculo envolve a propagação do gradiente de volta pela rede, ajustando os pesos em cada camada de acordo com o gradiente calculado.
 
-. Atualização dos pesos:
+<b>6. Atualização dos pesos:</b>
 
 Usamos um algoritmo de otimização, como o gradiente descendente estocástico (SGD), para atualizar os pesos da rede neural com base no gradiente calculado. Isso ajuda a minimizar o erro e melhorar o desempenho da rede.
 
-7. Repetição:
+<b>7. Repetição:</b>
 
 Repetimos os passos 4 a 7 para cada ponto de dados de treinamento, ajustando gradualmente os pesos da rede neural para melhorar seu desempenho.
 Realizamos várias épocas (iterações completas pelo conjunto de treinamento) até que a rede neural atinja um desempenho satisfatório.
 
-8. Avaliação do desempenho:
+<b>8. Avaliação do desempenho:</b>
 
 Usamos o conjunto de teste para avaliar o desempenho da rede neural após o treinamento.
 Alimentamos os pontos de teste na rede neural e comparamos suas previsões com as classes verdadeiras.
